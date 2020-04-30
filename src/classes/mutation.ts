@@ -3,7 +3,6 @@ export class Mutation {
         const arr = this.getDnaArr(dna);
         let mutation = null;
         mutation = this.inlineValidation(arr);
-        console.log(mutation);
         if (mutation) {
             return true;
         }
@@ -36,7 +35,6 @@ export class Mutation {
                 } else {
                     count = 0;
                 }
-                console.log(count);
                 if (count >= 3) {
                     return true;
                 }
