@@ -11,11 +11,6 @@ export class AppController {
     private readonly mutationService: MutationService
   ) { }
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
-
   @Post('mutation')
   async mutation(@Body() { dna }, @Res() res: Response) {
     if (!dna) {
